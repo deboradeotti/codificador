@@ -2,7 +2,7 @@ var input = document.querySelector("input");
 var result = "";
 
 function showResult() {
-    document.querySelector("div.result-text").innerHTML = "<p>" + result + "</p>";
+    document.querySelector("div.result-text-container").innerHTML = "<p class='result-text'>" + result + "</p>";
     input.value = "";
 }
 
@@ -13,19 +13,19 @@ encryptBtn.addEventListener("click", function encrypt() {
     result = text 
 
     if (text.includes("a") == true) {
-        result = result.replace("a", "ai");
+        result = result.replace(/a/g, "ai");
     } 
     if (text.includes("e") == true) {
-        result = result.replace("e", "enter");
+        result = result.replace(/e/g, "enter");
     } 
     if (text.includes("i") == true) {
-        result = result.replace("i", "imes");
+        result = result.replace(/i/g, "imes");
     } 
     if (text.includes("o") == true) {
-        result = result.replace("o", "ober");
+        result = result.replace(/o/g, "ober");
     } 
     if (text.includes("u") == true) {
-        result = result.replace("u", "ufat");
+        result = result.replace(/u/g, "ufat");
     }
 
     showResult();
@@ -38,19 +38,19 @@ decryptBtn.addEventListener("click", function decrypt() {
     result = text 
 
     if (text.includes("ai") == true) {
-        result = result.replace("ai", "a");
+        result = result.replace(/ai/g, "a");
     } 
     if (text.includes("enter") == true) {
-        result = result.replace("enter", "e");
+        result = result.replace(/enter/g, "e");
     } 
     if (text.includes("imes") == true) {
-        result = result.replace("imes", "i");
+        result = result.replace(/imes/g, "i");
     } 
     if (text.includes("ober") == true) {
-        result = result.replace("ober", "o");
+        result = result.replace(/ober/g, "o");
     } 
     if (text.includes("ufat") == true) {
-        result = result.replace("ufat", "u");
+        result = result.replace(/ufat/g, "u");
     }
     
     showResult();
@@ -58,5 +58,15 @@ decryptBtn.addEventListener("click", function decrypt() {
 
 const copyBtn = document.querySelector("button.copy");
 copyBtn.addEventListener("click", function copy() {
-    showResult();
+
+    var copyText = document.querySelector("p.result-text").innerHTML;
+
+    navigator.clipboard.writeText(copyText)
+        .then(() => {
+        console.log("Text copied to clipboard...")
+    })
+        .catch(err => {
+        console.log('Something went wrong', err);
+    })
+    
 });
