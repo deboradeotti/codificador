@@ -6,25 +6,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 
     <title>Codificador de texto</title>
 </head>
 
 <body>
-    <h1>Digite seu texto</h1>
 
-    <input type="text"/>
-    <button type="button" class="encrypt">Criptografar</button> 
-    <button type="button" class="decrypt">Descriptografar</button>
+    <div class="wrapper">
 
-    <div class="result">
-        <div class="result-text-container"></div>
-        <button type="button" class="copy">Copiar</button>
+        <div class="entry">
+
+            <div class="main-text">
+                <h1 class="title">Digite seu texto</h1>
+                <input type="text"/>
+            </div>
+
+            <div class="main-buttons">
+                <button type="button" class="encrypt">Criptografar</button> 
+                <button type="button" class="decrypt">Descriptografar</button>
+            </div>
+            
+        </div>
+
+        <div class="result">
+            <div class="result-text-container"></div>
+            <button type="button" class="copy">Copiar</button>
+        </div>
+
     </div>
+
 </body>
 
 <footer>
-    <p>2022 - Desenvolvido por <strong>Débora Deotti</strong></p>
+    <p>2022 | Desenvolvido por <strong>Débora Deotti</strong></p>
 </footer>
 </html>

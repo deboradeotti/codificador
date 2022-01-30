@@ -1,0 +1,100 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 14 px;
+}
+
+body {
+    background-color: #ecdaf2;
+}
+
+.wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 30px;
+}
+
+.entry {
+    /* background-color: whitesmoke; */
+    width: 700px;
+    height: 82vh;
+    margin-left: 50px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 40px;
+}
+
+.main-text {
+    display: block;
+
+}
+
+.title {
+    color: #451255;
+    margin: 40px;
+    margin-left: 95px;
+}
+
+input {
+    border: none;
+    border-bottom: 2px solid #451255;
+    padding: 12px 20px;
+    background-color: transparent;
+    margin: 0 95px;
+    width: 470px;
+    height: 100px;
+}
+
+input :focus {
+    outline: none;
+  }
+
+button {
+    border-width: 1.5px;
+    border-color: #451255;;
+    width: 200px;
+    padding: 15px;
+    margin: 40px 30px;
+    border-radius: 32px;
+}
+
+.main-buttons {
+    display: flex;
+    /* background-color: red; */
+    align-items: center;
+    justify-content: center;
+}
+
+.encrypt {
+    color: white;
+    background-color: #451255;
+}
+
+.decrypt {
+    color: #451255;;
+}
+
+.result {
+    width: 400px;
+    height: 82vh;
+    background: #FFFFFF;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+    margin-right: 40px;
+}
+
+footer p {
+    margin-top: 30px;
+    margin-left: 50px;
+    text-align: left;
+    font-size: 12px;
+    color: rgb(43, 43, 43);
+}
