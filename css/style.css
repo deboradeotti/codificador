@@ -7,7 +7,7 @@ body {
     align-items: center;
     display: flex;
     justify-content: space-between;
-    padding: 30px 90px;
+    padding: 30px 90px 20px 90px;
 }
 
 .entry {
