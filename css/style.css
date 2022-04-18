@@ -66,7 +66,6 @@ input:focus {
 }
 
 .entry__buttons {
-    align-items: flex-end;
     display: flex;
     justify-content: flex-start;
     margin-top: 15px;
@@ -89,7 +88,6 @@ input:focus {
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
     color: #343A40;
     height: 85vh;
-    max-width: 400px;
     text-align: center;
     width: 30%;
 }
@@ -154,4 +152,67 @@ input:focus {
     color: inherit;
     font-weight: 700;
     text-decoration: none;
+}
+
+@media screen and (max-width: 1200px) {
+    .main-wrapper {
+        align-items: center;
+       flex-direction: column;
+       justify-content: flex-start;
+       padding: 30px
+    }
+    
+    .entry {
+        height: 70vh;
+        width: 95%;
+    }
+
+    .entry__input {
+        margin-top: 10px;
+    }
+
+    .entry__buttons {
+        justify-content: center;
+    }
+
+    .signature {
+        padding: 10px;
+    }
+
+    .output {
+        margin-top: 30px;
+        height: 100%;
+        width: 95%;
+    }
+
+    .output__default.active {
+        height: 30vh;
+    }
+
+    .output__default--image {
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+    .entry__buttons {
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .entry__buttons--encrypt {
+        margin: 16px 0;
+    }
+
+    .output {
+        margin-top: 15px;
+        width: 95%;
+        height: 100%;
+    }
+
+    .output__default.active {
+        height: 20vh;
+    }
 }
