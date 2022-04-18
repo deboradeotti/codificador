@@ -2,11 +2,13 @@ var input = document.querySelector("input");
 var result = "";
 
 function showResult() {
-    document.querySelector("div.result-text-container").innerHTML = "<p class='result-text'>" + result + "</p>";
+    document.querySelector("div.output__default").classList.remove("active");
+    document.querySelector("div.output__result").classList.add("active");
+    document.querySelector("div.result__text-container").innerHTML = "<p class='result__text'>" + result + "</p>";
     input.value = "";
 }
 
-const encryptBtn = document.querySelector("button.encrypt");
+const encryptBtn = document.querySelector("button.entry__buttons--encrypt");
 encryptBtn.addEventListener("click", function encrypt() {
 
     var text = input.value;
@@ -31,7 +33,7 @@ encryptBtn.addEventListener("click", function encrypt() {
     showResult();
 });
 
-const decryptBtn = document.querySelector("button.decrypt");
+const decryptBtn = document.querySelector("button.entry__buttons--decrypt");
 decryptBtn.addEventListener("click", function decrypt() {
 
     var text = input.value;
@@ -56,10 +58,10 @@ decryptBtn.addEventListener("click", function decrypt() {
     showResult();
 });
 
-const copyBtn = document.querySelector("button.copy");
+const copyBtn = document.querySelector("button.result__text-container--button");
 copyBtn.addEventListener("click", function copy() {
 
-    var copyText = document.querySelector("p.result-text").innerHTML;
+    var copyText = document.querySelector("p.result__text").innerHTML;
 
     navigator.clipboard.writeText(copyText)
         .then(() => {

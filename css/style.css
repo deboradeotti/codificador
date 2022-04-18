@@ -1,0 +1,157 @@
+body {
+    background-color: #F3F5FC;
+    font-family: 'Inter', sans-serif;
+}
+
+.main-wrapper {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 90px;
+}
+
+.entry {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 85vh;
+    width: 70%;
+}
+
+.entry__input {
+    background-color: transparent;
+    border: none;
+    box-sizing: border-box;
+    color: #0A3871;
+    font-size: 24px;
+    margin: 40px 0;
+    padding: 10px 0px;
+}
+
+::placeholder {
+    color: #0A3871;
+    opacity: 1;
+}
+
+input:focus {
+    outline: none;
+}
+
+.entry__warning {
+    align-items: center;
+    display: flex;
+}
+
+.entry__warning--text {
+    color: #495057;
+    font-size: 12px;
+    padding-left: 5px;
+}
+
+.button {
+    background: transparent;
+    border-color: #0A3871;
+    border-radius: 24px;
+    border-width: 1.5px;
+    color: #0A3871;
+    cursor: pointer;
+    font-size: 16px;
+    height: 67px;
+    padding: 15px;
+    width: 320px;
+}
+
+.button:hover {
+    background: #D8DFE8;
+}
+
+.entry__buttons {
+    align-items: flex-end;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+.entry__buttons--encrypt {
+    background: #0A3871;
+    color: white;
+    margin-right: 25px;
+}
+
+.entry__buttons--encrypt:hover {
+    background: #072a54;
+}
+
+.output {
+    background: #FFFFFF;
+    border-radius: 32px;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    color: #343A40;
+    height: 85vh;
+    max-width: 400px;
+    text-align: center;
+    width: 30%;
+}
+
+.output__default {
+    display: none;
+}
+
+.output__default.active {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.output__default--image {
+    padding: 20px;
+    width: 75%;
+}
+
+.output__default--title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+    padding: 16px 0;
+}
+
+.output__default--text {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.output__result {
+    display: none;
+}
+
+.output__result.active {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 32px;
+}
+
+.result__text-container {
+    font-size: 24px;
+}
+
+.result__text-container--button {
+    width: 95%;
+}
+
+.signature {
+    font-size: 12px;
+    text-align: center;
+}
+
+.signature__link {
+    color: inherit;
+    font-weight: 700;
+    text-decoration: none;
+}
